@@ -8,7 +8,7 @@ class Fieldset extends FieldComposite
     {
         $input = parent::render();
 
-        return "<fieldset><legend>{$this->getTitle()}</legend>\n{$input}</fieldset>\n";
+        return "\n<fieldset><legend>{$this->getTitle()}</legend>\n{$input}</fieldset>\n";
     }
 
 }
