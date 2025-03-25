@@ -4,7 +4,7 @@ namespace App\Services;
 
 abstract class FieldComposite extends FormElement
 {
-    protected $fields = [];
+    protected array $fields = [];
 
     public function add(FormElement $field): void
     {
