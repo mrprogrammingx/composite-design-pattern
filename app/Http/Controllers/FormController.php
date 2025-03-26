@@ -10,7 +10,8 @@ class FormController extends Controller
     public function __construct(public ProductForm $productForm)
     {
     }
-    public function index()
+
+    public function index(): void
     {
         $form = $this->productForm->getProductForm();
 
