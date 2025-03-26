@@ -2,8 +2,16 @@
 
 namespace App\Services;
 
+use App\DataProviders\ProductDataProvider;
+
 class ProductForm
 {
+
+    public function __construct(public ProductDataProvider $productDataProvider)
+    {
+
+    }
+
     public function getProductForm(): FormElement
     {
         $form = new Form('product', 'Add product', '/product/add');
@@ -21,14 +29,7 @@ class ProductForm
     public function loadProductData(FormElement $form, array $data = []): void
     {
         if($data === []){
-            $data = [
-                'name' => 'Apple',
-                'description' => 'A juicy apple',
-                'photo' => [
-                    'caption' => 'Apple photo',
-                    'photo' => 'apple.jpg'
-                ]
-            ]; 
+            $data = $this->productDataProvider->getDefaultProductData();
         }
 
         $form->setData($data);
