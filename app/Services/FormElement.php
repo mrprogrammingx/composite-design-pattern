@@ -2,7 +2,9 @@
 
 namespace App\Services;
 
-abstract class FormElement
+use App\Contracts\FormElementInterface;
+
+abstract class FormElement implements FormElementInterface
 {
     protected $name;
     protected $title;
