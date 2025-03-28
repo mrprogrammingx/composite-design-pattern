@@ -2,14 +2,14 @@
 
 namespace App\Services;
 
+use App\Contracts\FormElementInterface;
 use App\DataProviders\ProductDataProvider;
 
 class ProductForm
 {
 
-    public function __construct(public ProductDataProvider $productDataProvider)
+    public function __construct(public FormElementInterface $form, public ProductDataProvider $productDataProvider)
     {
-
     }
 
     public function getProductForm(): FormElement
