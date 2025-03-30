@@ -14,7 +14,7 @@ class ProductForm
 
     public function getProductForm(): FormElement
     {
-        $form = new Form('product', 'Add product', '/product/add');
+        $form = clone $this->form;
         $form->add(new Input('name', 'Name', 'text'));
         $form->add(new Input('description', 'Description', 'text'));
         
