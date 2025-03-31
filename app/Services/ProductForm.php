@@ -28,7 +28,7 @@ class ProductForm
 
     public function loadProductData(FormElement $form, array $data = []): void
     {
-        if($data === []){
+        if(empty($data)){
             $data = $this->productDataProvider->getDefaultProductData();
         }
 
