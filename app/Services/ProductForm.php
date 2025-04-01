@@ -35,7 +35,7 @@ class ProductForm
         $form->setData($data);
     }
 
-    public function renderProductForm(FormElement $form): string
+    public function renderProductForm(FormElementInterface $form): string
     {
         return $form->render();
     }
