@@ -26,7 +26,7 @@ class ProductForm
         return $form;
     }
 
-    public function loadProductData(FormElement $form, array $data = []): void
+    public function loadProductData(FormElementInterface $form, array $data = []): void
     {
         if(empty($data)){
             $data = $this->productDataProvider->getDefaultProductData();
