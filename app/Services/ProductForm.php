@@ -8,7 +8,7 @@ use App\DataProviders\ProductDataProvider;
 class ProductForm
 {
 
-    public function __construct(public FormElementInterface $form, public ProductDataProvider $productDataProvider)
+    public function __construct(private FormElementInterface $form, public ProductDataProvider $productDataProvider)
     {
     }
 
