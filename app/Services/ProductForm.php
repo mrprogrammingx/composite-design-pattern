@@ -12,7 +12,7 @@ class ProductForm
     {
     }
 
-    public function getProductForm(): FormElement
+    public function getProductForm(): FormElementInterface
     {
         $form = clone $this->form;
         $form->add(new Input('name', 'Name', 'text'));
