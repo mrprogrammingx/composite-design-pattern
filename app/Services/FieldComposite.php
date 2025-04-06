@@ -21,8 +21,8 @@ abstract class FieldComposite extends FormElement
 
     public function setData($data): void
     {
-        foreach ($this->fields as $name => $field){
-            if (isset($data[$name])){
+        foreach ($this->fields as $name => $field) {
+            if (isset($data[$name])) {
                 $field->setData($data[$name]);
             }
         }
@@ -31,7 +31,7 @@ abstract class FieldComposite extends FormElement
     public function getData(): array
     {
         $data = [];
-        foreach ($this->fields as $name => $field){
+        foreach ($this->fields as $name => $field) {
             $data[$name] = $field->getData();
         }
         return $data;
@@ -41,7 +41,7 @@ abstract class FieldComposite extends FormElement
     {
         $input = '';
 
-        foreach($this->fields as $name => $field){
+        foreach ($this->fields as $name => $field) {
             $input .= $field->render();
         }
 
