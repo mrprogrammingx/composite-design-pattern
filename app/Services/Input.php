@@ -24,7 +24,7 @@ class Input extends FormElement
 
     public function render(): string
     {
-        return "\n" . '<label for="' . $this->getName() . '">' . $this->getTitle() . '</label>
-                <input type="' . $this->getType() . '" id="' . $this->getName() . '" name="' . $this->getName() . '">' . "\n";
+        return "\n" . '<label for="' . $this->getName() . '">' . $this->getTitle() . '</label> . ""' . "\n" .
+                '<input type="' . $this->getType() . '" id="' . $this->getName() . '" name="' . $this->getName() . '">' . "\n";
     }
 }
